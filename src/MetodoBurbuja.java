@@ -1,37 +1,57 @@
 public class MetodoBurbuja {
-    public void ordenarAscendente(int[] arreglo) {
-        for (int i = 0; i < arreglo.length; i++) {
-            for (int j = i + 1; j < arreglo.length; j++) {
-                System.out.println("i=" + i + " j=" + j);
-                if (arreglo[i] > arreglo[j]) {
-                    int aux = arreglo[i];
-                    arreglo[i] = arreglo[j];
-                    arreglo[j] = aux;
-                }
-            }
-        }
-    }
 
-    public void imprimirArreglo(int[] arreglo) {
-        for (int i = 0; i < arreglo.length; i++) {
-            System.out.print(arreglo[i] + " ");
-        }
-        System.out.println();
-    }
+    public int[] ordenarAscendente(int[] arreglo, boolean mostrarPasos) {
+        int comparaciones = 0;
+        int cambios = 0;
 
-    public void ordenar(int[] arreglo, boolean isDes) {
-        if (isDes) {
-            for (int i = 0; i < arreglo.length; i++) {
-                for (int j = i + 1; j < arreglo.length; j++) {
-                    if (arreglo[i] < arreglo[j]) {
-                        int aux = arreglo[i];
-                        arreglo[i] = arreglo[j];
-                        arreglo[j] = aux;
+        for (int i = 0; i < arreglo.length - 1; i++) {
+            for (int j = 0; j < arreglo.length - 1 - i; j++) {
+                comparaciones++;
+
+                if (arreglo[j] > arreglo[j + 1]) {
+                    int aux = arreglo[j];
+                    arreglo[j] = arreglo[j + 1];
+                    arreglo[j + 1] = aux;
+                    cambios++;
+
+                    if (mostrarPasos) {
+                        printArray(arreglo);
                     }
                 }
             }
-        } else {
-            ordenarAscendente(arreglo);
         }
+
+        return new int[]{comparaciones, cambios};
+    }
+
+    public int[] ordenarDescendente(int[] arreglo, boolean mostrarPasos) {
+        int comparaciones = 0;
+        int cambios = 0;
+
+        for (int i = 0; i < arreglo.length - 1; i++) {
+            for (int j = 0; j < arreglo.length - 1 - i; j++) {
+                comparaciones++;
+
+                if (arreglo[j] < arreglo[j + 1]) {
+                    int aux = arreglo[j];
+                    arreglo[j] = arreglo[j + 1];
+                    arreglo[j + 1] = aux;
+                    cambios++;
+
+                    if (mostrarPasos) {
+                        printArray(arreglo);
+                    }
+                }
+            }
+        }
+
+        return new int[]{comparaciones, cambios};
+    }
+
+    protected void printArray(int[] arreglo) {
+        for (int num : arreglo) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
     }
 }

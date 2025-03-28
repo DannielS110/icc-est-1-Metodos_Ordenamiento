@@ -1,48 +1,66 @@
 public class MetodoSeleccion {
-    public void ordenarAscendente(int[] arreglo) {
-        for (int i = 0; i < arreglo.length; i++) {
-            int iM = i;
+
+    public int[] ordenarAscendente(int[] arreglo, boolean mostrarPasos) {
+        int comparaciones = 0;
+        int cambios = 0;
+
+        for (int i = 0; i < arreglo.length - 1; i++) {
+            int min = i;
+
             for (int j = i + 1; j < arreglo.length; j++) {
-                if (arreglo[j] < arreglo[iM]) {
-                    iM = j;
+                comparaciones++;
+                if (arreglo[j] < arreglo[min]) {
+                    min = j;
                 }
             }
-            if (i != iM) {
-                int aux = arreglo[i];
-                arreglo[i] = arreglo[iM];
-                arreglo[iM] = aux;
-            }
-        }
-    }
 
-    public void ordenarDescendente(int[] arreglo) {
-        for (int i = 0; i < arreglo.length; i++) {
-            int iM = i;
-            for (int j = i + 1; j < arreglo.length; j++) {
-                if (arreglo[j] > arreglo[iM]) {
-                    iM = j;
+            if (min != i) {
+                int aux = arreglo[i];
+                arreglo[i] = arreglo[min];
+                arreglo[min] = aux;
+                cambios++;
+
+                if (mostrarPasos) {
+                    printArray(arreglo);
                 }
             }
-            if (i != iM) {
+        }
+
+        return new int[]{comparaciones, cambios};
+    }
+
+    public int[] ordenarDescendente(int[] arreglo, boolean mostrarPasos) {
+        int comparaciones = 0;
+        int cambios = 0;
+
+        for (int i = 0; i < arreglo.length - 1; i++) {
+            int max = i;
+
+            for (int j = i + 1; j < arreglo.length; j++) {
+                comparaciones++;
+                if (arreglo[j] > arreglo[max]) {
+                    max = j;
+                }
+            }
+
+            if (max != i) {
                 int aux = arreglo[i];
-                arreglo[i] = arreglo[iM];
-                arreglo[iM] = aux;
+                arreglo[i] = arreglo[max];
+                arreglo[max] = aux;
+                cambios++;
+
+                if (mostrarPasos) {
+                    printArray(arreglo);
+                }
             }
         }
+
+        return new int[]{comparaciones, cambios};
     }
 
-    public void ordenar(int[] arreglo, boolean isDes) {
-        if (isDes) {
-            ordenarAscendente(arreglo);
-        } else {
-            ordenarDescendente(arreglo);
-        }
-    }
-
-    public void printArray(int[] arreglo) {
-        System.out.println("Arreglo Clase Selección");
-        for (int i = 0; i < arreglo.length; i++) {
-            System.out.print(arreglo[i] + " ");
+    protected void printArray(int[] arreglo) {
+        for (int num : arreglo) {
+            System.out.print(num + " ");
         }
         System.out.println();
     }
