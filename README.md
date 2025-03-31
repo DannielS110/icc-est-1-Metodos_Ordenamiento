@@ -1,4 +1,5 @@
 Práctica de Algoritmos de Ordenamiento
+
 📌 Información General
 
 Título: Algoritmos de Ordenamiento
@@ -11,6 +12,7 @@ Profesor: ING. PABLO ANDRES TORRES PEÑA
 
 
 🛠️ Descripción
+
 Este proyecto implementa y compara diferentes algoritmos de ordenamiento en Java, permitiendo visualizar el proceso paso a paso. Los algoritmos implementados son:
 
 Método Burbuja: Compara elementos adyacentes e intercambia si están en orden incorrecto.
