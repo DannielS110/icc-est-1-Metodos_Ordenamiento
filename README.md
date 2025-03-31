@@ -72,10 +72,16 @@ MetodoBurbujaMejorado.java: Implementación del algoritmo Burbuja Mejorado
 📝 Conclusiones
 
 Eficiencia comparativa: El análisis de los resultados muestra que el algoritmo de Inserción realiza significativamente menos comparaciones (108) que Burbuja y Selección (190 cada uno), lo que lo hace más eficiente en términos de operaciones de comparación.
+
 Optimización de intercambios: El método de Selección destaca por realizar solo 17 intercambios, mientras que los demás algoritmos requieren 93, demostrando su eficiencia en sistemas donde los intercambios son costosos.
+
 Detección temprana: El algoritmo de Burbuja Mejorado demuestra su optimización al realizar 184 comparaciones frente a las 190 del Burbuja clásico, evidenciando la ventaja de la detección temprana de ordenamiento.
+
 Aplicaciones prácticas: Cada algoritmo tiene escenarios óptimos de aplicación:
 
+
 Inserción: Ideal para arreglos pequeños o parcialmente ordenados
+
 Selección: Preferible cuando el costo de intercambio es alto
+
 Burbuja Mejorado: Útil cuando se espera que el arreglo esté casi ordenado
