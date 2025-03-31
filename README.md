@@ -13,11 +13,16 @@ Profesor: ING. PABLO ANDRES TORRES PEÑA
 
 🛠️ Descripción
 
-Este proyecto implementa y compara diferentes algoritmos de ordenamiento en Java, permitiendo visualizar el proceso paso a paso. Los algoritmos implementados son:
+Este proyecto implementa y compara diferentes algoritmos de ordenamiento en Java, permitiendo visualizar el proceso paso a paso.
+
+Los algoritmos implementados son:
 
 Método Burbuja: Compara elementos adyacentes e intercambia si están en orden incorrecto.
+
 Método Selección: Busca el elemento mínimo/máximo y lo coloca en la posición correcta.
+
 Método Inserción: Construye el arreglo ordenado un elemento a la vez.
+
 Método Burbuja Mejorado: Versión optimizada que termina anticipadamente si no hay intercambios.
 
 
@@ -25,11 +30,15 @@ Método Burbuja Mejorado: Versión optimizada que termina anticipadamente si no 
 El programa permite:
 
 Elegir entre los cuatro algoritmos de ordenamiento
+
 Seleccionar ordenamiento ascendente o descendente
+
 Visualizar los pasos intermedios del proceso 
+
 Ver estadísticas de rendimiento:
 
 Número total de comparaciones
+
 Número total de cambios realizados
 
 
