@@ -3,11 +3,17 @@ Práctica de Algoritmos de Ordenamiento
 📌 Información General
 
 Título: Algoritmos de Ordenamiento
+
 Asignatura: Estructura de Datos
+
 Carrera: Computación
+
 Estudiante: Daniel Sanchez Valle
+
 Ciclo: 2do Ciclo
+
 Fecha: 31 de marzo de 2025
+
 Profesor: ING. PABLO ANDRES TORRES PEÑA
 
 
@@ -53,10 +59,15 @@ Número total de cambios realizados
 La visualización detallada muestra:
 
 El arreglo original
+
 Cada comparación realizada
+
 Intercambios efectuados
+
 Estado actual del arreglo después de cada operación
+
 Elementos fijados en su posición final
+
 Estadísticas finales
 
 
@@ -72,9 +83,13 @@ El Burbuja Mejorado termina antes que el Burbuja clásico
 📋 Estructura del Proyecto
 
 App.java: Clase principal con menú interactivo
+
 MetodoBurbuja.java: Implementación del algoritmo Burbuja
+
 MetodoSeleccion.java: Implementación del algoritmo Selección
+
 MetodoInsercion.java: Implementación del algoritmo Inserción
+
 MetodoBurbujaMejorado.java: Implementación del algoritmo Burbuja Mejorado
 
 
