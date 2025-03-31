@@ -56,6 +56,7 @@ Número total de cambios realizados
 
 ![image](https://github.com/user-attachments/assets/8dbb8f65-b83b-4704-83c8-9f5e90b61415)
 
+![code](https://github.com/user-attachments/assets/8a0d19fe-258a-4814-916b-bd1988b1386d)
 
 
 
