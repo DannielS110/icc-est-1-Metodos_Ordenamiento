@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-        int[] arregloOriginal = { 10, 9, 21, 5, 15, 2, -1, 0 };
+        int[] arregloOriginal = { 12, -7, 25, 0, -15, 33, 19, -22, 5, 48, -3, 27, -30, 14, 7, -1, 41, 20, -11, 8 };
         Scanner scanner = new Scanner(System.in);
         boolean continuar = true;
 
@@ -19,63 +19,73 @@ public class App {
             System.out.println("4 -> Burbuja Mejorado");
             System.out.println("5 -> Salir");
 
-            // int metodo = scanner.nextInt();
-            int metodo = getPositive(scanner,"ingrese la opccion ");
+            int metodo = getOpcionValida(scanner, "Ingrese la opción", 1, 5);
 
             if (metodo == 5) {
                 System.out.println("¡Adiós!");
-                continuar = false;
                 break;
             }
 
             System.out.print("¿Desea ver los pasos? (true/false): ");
-            boolean conPasos = scanner.nextBoolean();
+            boolean mostrarPasos = getBooleanValido(scanner, "\n--------------------------------");
 
-            System.out.print("");
-            String orden = getValidString(scanner, new String[]{"A","D"},"Desea ordenar ascendentemente (A) o descendentemente (D)?:" );
+            String orden = getValidString(scanner, new String[] { "A", "D" },
+                    "¿Desea ordenar ascendentemente (A) o descendentemente (D)?");
+
             int[] copia = arregloOriginal.clone();
-            int[] resultados;
+            int[] resultados = new int[2];
+            boolean ascendente = orden.equalsIgnoreCase("A");
 
-            switch (metodo) {
-                case 1:
-                    System.out.println("\nMétodo Burbuja");
-                    resultados = (orden.equalsIgnoreCase("A"))
-                    ?burbuja.ordenarAscendente(arregloOriginal, conPasos)
-                    :burbuja.ordenarDescendente(arregloOriginal, conPasos);
-                    break;
-
-                case 2:
-                    System.out.println("\nMétodo Selección");
-                    resultados = (orden.equalsIgnoreCase("A"))
-                    ?burbuja.ordenarAscendente(arregloOriginal, conPasos)
-                    :burbuja.ordenarAscendente(arregloOriginal, conPasos);
-                    break;
-
-                case 3:
-                    System.out.println("\nMétodo Inserción");
-                    resultados = (orden.equalsIgnoreCase("A"))
-                    ?burbuja.ordenarAscendente(arregloOriginal, conPasos)
-                    :burbuja.ordenarAscendente(arregloOriginal, conPasos);
-                    break;
-                    
-
-                case 4:
-                    System.out.println("\nMétodo Burbuja Mejorado");
-                    resultados = (orden.equalsIgnoreCase("A"))
-                    ?burbuja.ordenarAscendente(arregloOriginal, conPasos)
-                    :burbuja.ordenarAscendente(arregloOriginal, conPasos);
-                    break;
-                    
-
-                default:
-                    System.out.println("Opción inválida.");
-                    continue;
-            }
-
-            System.out.println("Arreglo ordenado:");
+           switch (metodo) {
+            case 1:
+                System.out.println("\n[ Ordenamiento por Burbuja ]");
+                if (ascendente) {
+                    System.out.println("Iniciando ordenamiento ascendente con Burbuja...");
+                    resultados = burbuja.ordenarAscendente(copia, mostrarPasos);
+                } else {
+                    System.out.println("Iniciando ordenamiento descendente con Burbuja...");
+                    resultados = burbuja.ordenarDescendente(copia, mostrarPasos);
+                }
+                break;
+            case 2:
+                System.out.println("\n[ Ordenamiento por Selección ]");
+                if (ascendente) {
+                    System.out.println("Iniciando ordenamiento ascendente con Selección...");
+                    resultados = seleccion.ordenarAscendente(copia, mostrarPasos);
+                } else {
+                    System.out.println("Iniciando ordenamiento descendente con Selección...");
+                    resultados = seleccion.ordenarDescendente(copia, mostrarPasos);
+                }
+                break;
+            case 3:
+                System.out.println("\n[ Ordenamiento por Inserción ]");
+                if (ascendente) {
+                    System.out.println("Iniciando ordenamiento ascendente con Inserción...");
+                    resultados = insercion.ordenarAscendente(copia, mostrarPasos);
+                } else {
+                    System.out.println("Iniciando ordenamiento descendente con Inserción...");
+                    resultados = insercion.ordenarDescendente(copia, mostrarPasos);
+                }
+                break;
+            case 4:
+                System.out.println("\n[ Ordenamiento por Burbuja Mejorado ]");
+                if (ascendente) {
+                    System.out.println("Iniciando ordenamiento ascendente con Burbuja Mejorado...");
+                    resultados = mbm.ordenarAscendente(copia, mostrarPasos);
+                } else {
+                    System.out.println("Iniciando ordenamiento descendente con Burbuja Mejorado...");
+                    resultados = mbm.ordenarDescendente(copia, mostrarPasos);
+                }
+                break;
+            default:
+                resultados = new int[]{0, 0}; 
+        }
+            
+            System.out.println("-- FIN DEL MÉTODO --");
+            System.out.print("Arreglo ordenado -> ");
             printArray(copia);
-            System.out.println("Comparaciones -> " + resultados[0]);
-            System.out.println("Cambios -> " + resultados[1]);
+            System.out.println("Comparaciones Totales -> " + resultados[0]);
+            System.out.println("Cambios Totales -> " + resultados[1]);
         }
 
         scanner.close();
@@ -88,16 +98,15 @@ public class App {
         System.out.println();
     }
 
-    public static String getValidString(Scanner scanner, String[] posibles, String message) {
+    public static String getValidString(Scanner scanner, String[] opciones, String mensaje) {
         String input;
         boolean valido;
-
         do {
-            System.out.println(message + ":");
+            System.out.println(mensaje);
             input = scanner.next();
             valido = false;
-            for (String posible : posibles) {
-                if (input.equalsIgnoreCase(posible)) {
+            for (String opcion : opciones) {
+                if (input.equalsIgnoreCase(opcion)) {
                     valido = true;
                     break;
                 }
@@ -106,68 +115,57 @@ public class App {
         return input;
     }
 
-    /*
-     * // Método Burbuja
-     * System.out.println("----- Método Burbuja -----");
-     * int[] arregloBurbuja = arregloOriginal.clone();
-     * System.out.println("Arreglo Original:");
-     * printArray(arregloBurbuja);
-     * MetodoBurbuja burbuja = new MetodoBurbuja();
-     * burbuja.ordenarAscendente(arregloBurbuja);
-     * System.out.println("Arreglo Ordenado ascendente:");
-     * printArray(arregloBurbuja);
-     * 
-     * // Método Selección
-     * System.out.println("\n----- Método Selección -----");
-     * int[] arregloSeleccion = arregloOriginal.clone();
-     * System.out.println("Arreglo Original:");
-     * printArray(arregloSeleccion);
-     * MetodoSeleccion seleccion = new MetodoSeleccion();
-     * seleccion.ordenarDescendente(arregloSeleccion);
-     * System.out.println("Arreglo Ordenado descendente:");
-     * printArray(arregloSeleccion);
-     * 
-     * // Método Inserción
-     * System.out.println("\n----- Método Inserción -----");
-     * int[] arregloInsercion = arregloOriginal.clone();
-     * System.out.println("Arreglo Original:");
-     * printArray(arregloInsercion);
-     * MetodoInsercion insercion = new MetodoInsercion();
-     * System.out.println("Arreglo Ordenado Con Pasos");
-     * insercion.ordenascendente(arregloInsercion, true);
-     * }
-     * 
-     * public static void printArray(int[] arreglo) {
-     * for (int num : arreglo) {
-     * System.out.print(num + " ");
-     * }
-     * System.out.println();
-     * }
-     */
-
-    /*
-     * MetodoBurbujaMejorado Mbm = new MetodoBurbujaMejorado();
-     * int resultadoComparaciones;
-     * 
-     * Mbm.printArray(arregloOriginal);
-     * Mbm.ordenarAscendente(arregloOriginal);
-     * resultadoComparaciones = Mbm.ordenarAscendente(arregloOriginal)
-     * Mbm.printArray(arregloOriginal);
-     * System.out.println("comparaciones -> "+ resultadoComparaciones);
-     */
-
-    public static int getPositive(Scanner scanner, String message) {
+    public static int getOpcionValida(Scanner scanner, String mensaje, int min, int max) {
         int input;
-
         do {
-            System.out.println(message + ":");
-            input = scanner.nextInt();
-            if (input <= 0) {
-                System.out.println("el numero debe ser positivo" + "intente nuevamente");
+            System.out.print(mensaje + ": ");
+            while (!scanner.hasNextInt()) {
+                System.out.print("Entrada inválida. Intente nuevamente: ");
+                scanner.next();
             }
-        } while (input <= 0);
-
+            input = scanner.nextInt();
+        } while (input < min || input > max);
         return input;
     }
-
+    public static boolean getBooleanValido(Scanner scanner, String mensaje) {
+        while (true) {
+            scanner.nextLine();
+    
+            System.out.println(mensaje);
+            System.out.println("Responde con precisión:");
+            System.out.println("- Escribe 'true' para Sí");
+            System.out.println("- Escribe 'false' para No");
+            System.out.print("opcion: ");
+    
+            if (scanner.hasNextInt() || scanner.hasNextDouble()) {
+                scanner.nextInt();
+                
+                System.out.println("\n[ERROR] ¡No se permiten números!");
+                System.out.println("\n\tPor favor, responde solo con 'true' o 'false'.");
+                System.out.println("\nsolo palabras, por favor.\n");
+                
+                scanner.nextLine();
+                continue;
+            }
+    
+            String input = scanner.nextLine().trim().toLowerCase();
+    
+            switch (input) {
+                case "true":
+                case "verdadero":
+                case "sí":
+                case "si":
+                    return true;
+                
+                case "false":
+                case "falso":
+                case "no":
+                    return false;
+                
+                default:
+                    System.out.println("\n[ERROR]\n\tEntrada inválida.");
+                    System.out.println("Por favor, escribe exactamente 'true' o 'false'.\n");
+            }
+        }
+    }
 }
