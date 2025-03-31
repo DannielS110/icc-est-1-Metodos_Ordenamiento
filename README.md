@@ -52,7 +52,10 @@ Número total de cambios realizados
 
 🚀 Ejecución
 
- ![image](https://github.com/user-attachments/assets/9e5a5f5d-40ae-4211-8f26-be03347d82fc)
+![image](https://github.com/user-attachments/assets/8f5660fb-1941-4224-a10b-4be1ee6da04b)
+
+![image](https://github.com/user-attachments/assets/da786aee-4524-4f0b-a21c-24a114ac07a6)
+
 
 
 
