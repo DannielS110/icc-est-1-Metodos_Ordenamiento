@@ -73,6 +73,7 @@ ejecucion de metodo burbuja normal como prueba
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
 📊 Visualización
+
 La visualización detallada muestra:
 
 El arreglo original
@@ -90,6 +91,7 @@ Estadísticas finales
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
 💡 Resultados
+
 Comparando los algoritmos con el mismo arreglo de entrada:
 ![alt text](image.png)
 
