@@ -69,8 +69,6 @@ ejecucion de metodo burbuja normal como prueba
 
 ![code](https://github.com/user-attachments/assets/8a0d19fe-258a-4814-916b-bd1988b1386d)
 
-
-
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
 📊 Visualización
