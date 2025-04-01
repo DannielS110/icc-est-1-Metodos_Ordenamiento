@@ -1,7 +1,5 @@
 Práctica de Algoritmos de Ordenamiento
 
-📌 Información General
-
 Título: Algoritmos de Ordenamiento
 
 Asignatura: Estructura de Datos
