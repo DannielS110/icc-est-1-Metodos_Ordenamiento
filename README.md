@@ -53,12 +53,12 @@ Número total de cambios realizados
 
 🚀 Ejecución
 
-menu 
+Menú 
 
 ![image](https://github.com/user-attachments/assets/e575c135-2435-47b4-bb5f-72bb2903ba80)
 
 
-controles de ingreso por teclado
+Controles de ingreso por teclado
 
 ![image](https://github.com/user-attachments/assets/aa05a3fb-4645-47ff-be0b-48b4d0eb2f32)
 ![image](https://github.com/user-attachments/assets/3b6bcc00-66f2-4627-852f-83fc222a7caf)
@@ -66,7 +66,7 @@ controles de ingreso por teclado
 ![image](https://github.com/user-attachments/assets/b64154f3-b1fc-4fa6-8b01-9d1e9c422049)
 
 
-ejecucion de metodo burbuja normal como prueba
+Ejecucíon de metodo burbuja normal como prueba
 
 ![code](https://github.com/user-attachments/assets/8a0d19fe-258a-4814-916b-bd1988b1386d)
 
