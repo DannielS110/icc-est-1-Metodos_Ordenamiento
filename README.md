@@ -52,8 +52,17 @@ Número total de cambios realizados
 
 🚀 Ejecución
 
-![image](https://github.com/user-attachments/assets/8f5660fb-1941-4224-a10b-4be1ee6da04b)
+menu 
+![image](https://github.com/user-attachments/assets/e575c135-2435-47b4-bb5f-72bb2903ba80)
 
+control de ingreso 
+![image](https://github.com/user-attachments/assets/aa05a3fb-4645-47ff-be0b-48b4d0eb2f32)
+![image](https://github.com/user-attachments/assets/3b6bcc00-66f2-4627-852f-83fc222a7caf)
+![image](https://github.com/user-attachments/assets/c4128594-9caf-4d1c-a574-867a99583d9a)
+![image](https://github.com/user-attachments/assets/b64154f3-b1fc-4fa6-8b01-9d1e9c422049)
+
+
+ejecucion de metodo burbuja normal como prueba
 ![code](https://github.com/user-attachments/assets/8a0d19fe-258a-4814-916b-bd1988b1386d)
 
 
