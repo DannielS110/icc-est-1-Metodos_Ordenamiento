@@ -30,6 +30,7 @@ Método Inserción: Construye el arreglo ordenado un elemento a la vez.
 
 Método Burbuja Mejorado: Versión optimizada que termina anticipadamente si no hay intercambios.
 
+--------------------------------------------------------------------------------------------------------------------------------------------------
 
 ✨ Características
 El programa permite:
