@@ -96,7 +96,9 @@ Comparando los algoritmos con el mismo arreglo de entrada:
 ![alt text](image.png)
 
 El método de Inserción realiza menos comparaciones
+
 El método de Selección realiza menos intercambios
+
 El Burbuja Mejorado termina antes que el Burbuja clásico
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
