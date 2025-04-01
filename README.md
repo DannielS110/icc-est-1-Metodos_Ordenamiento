@@ -57,7 +57,7 @@ menu
 ![image](https://github.com/user-attachments/assets/e575c135-2435-47b4-bb5f-72bb2903ba80)
 
 
-control de ingreso 
+controles de ingreso por teclado
 
 ![image](https://github.com/user-attachments/assets/aa05a3fb-4645-47ff-be0b-48b4d0eb2f32)
 ![image](https://github.com/user-attachments/assets/3b6bcc00-66f2-4627-852f-83fc222a7caf)
