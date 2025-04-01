@@ -1,5 +1,5 @@
 Práctica de Algoritmos de Ordenamiento
-
+--------------------------------------------------------------------------------------------------------------------------------------------------
 Título: Algoritmos de Ordenamiento
 
 Asignatura: Estructura de Datos
@@ -14,6 +14,7 @@ Fecha: 31 de marzo de 2025
 
 Profesor: ING. PABLO ANDRES TORRES PEÑA
 
+--------------------------------------------------------------------------------------------------------------------------------------------------
 
 🛠️ Descripción
 
@@ -46,6 +47,7 @@ Número total de comparaciones
 Número total de cambios realizados
 
 
+--------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 🚀 Ejecución
@@ -69,6 +71,7 @@ ejecucion de metodo burbuja normal como prueba
 
 
 
+--------------------------------------------------------------------------------------------------------------------------------------------------
 
 📊 Visualización
 La visualización detallada muestra:
@@ -85,6 +88,7 @@ Elementos fijados en su posición final
 
 Estadísticas finales
 
+--------------------------------------------------------------------------------------------------------------------------------------------------
 
 💡 Resultados
 Comparando los algoritmos con el mismo arreglo de entrada:
@@ -94,6 +98,7 @@ El método de Inserción realiza menos comparaciones
 El método de Selección realiza menos intercambios
 El Burbuja Mejorado termina antes que el Burbuja clásico
 
+--------------------------------------------------------------------------------------------------------------------------------------------------
 
 📋 Estructura del Proyecto
 
@@ -107,6 +112,7 @@ MetodoInsercion.java: Implementación del algoritmo Inserción
 
 MetodoBurbujaMejorado.java: Implementación del algoritmo Burbuja Mejorado
 
+--------------------------------------------------------------------------------------------------------------------------------------------------
 
 📝 Conclusiones
 
