@@ -66,7 +66,7 @@ Controles de ingreso por teclado
 ![image](https://github.com/user-attachments/assets/b64154f3-b1fc-4fa6-8b01-9d1e9c422049)
 
 
-Ejecucíon de metodo burbuja normal como prueba
+Ejecución de método burbuja normal como prueba
 
 ![code](https://github.com/user-attachments/assets/8a0d19fe-258a-4814-916b-bd1988b1386d)
 
